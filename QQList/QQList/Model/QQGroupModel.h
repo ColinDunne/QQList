@@ -16,6 +16,7 @@
 @property (nonatomic, copy) NSString *online;
 @property (nonatomic, strong) NSArray *friends;
 @property (nonatomic, strong) QQFirendModel *friendModel;
+@property (nonatomic, assign) BOOL isOpen;
 
 - (instancetype)initWithDict:(NSDictionary *)dict;
 

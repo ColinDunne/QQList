@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D063411F1AC451240032BC14 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D063411E1AC451240032BC14 /* main.m */; };
 		D06341221AC451240032BC14 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D06341211AC451240032BC14 /* AppDelegate.m */; };
-		D06341251AC451240032BC14 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D06341241AC451240032BC14 /* ViewController.m */; };
 		D06341281AC451240032BC14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D06341261AC451240032BC14 /* Main.storyboard */; };
 		D063412A1AC451240032BC14 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D06341291AC451240032BC14 /* Images.xcassets */; };
 		D063412D1AC451240032BC14 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D063412B1AC451240032BC14 /* LaunchScreen.xib */; };
@@ -17,6 +16,8 @@
 		D06341461AC452F60032BC14 /* friends.plist in Resources */ = {isa = PBXBuildFile; fileRef = D06341451AC452F60032BC14 /* friends.plist */; };
 		D06341491AC4549F0032BC14 /* QQFirendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D06341481AC4549F0032BC14 /* QQFirendModel.m */; };
 		D063414C1AC454C90032BC14 /* QQGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D063414B1AC454C90032BC14 /* QQGroupModel.m */; };
+		D063414F1AC45E7C0032BC14 /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063414E1AC45E7C0032BC14 /* ListTableViewController.m */; };
+		D06341521AC463050032BC14 /* QQDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D06341511AC463050032BC14 /* QQDataModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +36,6 @@
 		D063411E1AC451240032BC14 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D06341201AC451240032BC14 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D06341211AC451240032BC14 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D06341231AC451240032BC14 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D06341241AC451240032BC14 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D06341271AC451240032BC14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D06341291AC451240032BC14 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D063412C1AC451240032BC14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -48,6 +47,10 @@
 		D06341481AC4549F0032BC14 /* QQFirendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQFirendModel.m; sourceTree = "<group>"; };
 		D063414A1AC454C90032BC14 /* QQGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQGroupModel.h; sourceTree = "<group>"; };
 		D063414B1AC454C90032BC14 /* QQGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQGroupModel.m; sourceTree = "<group>"; };
+		D063414D1AC45E7C0032BC14 /* ListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewController.h; sourceTree = "<group>"; };
+		D063414E1AC45E7C0032BC14 /* ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewController.m; sourceTree = "<group>"; };
+		D06341501AC463050032BC14 /* QQDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQDataModel.h; sourceTree = "<group>"; };
+		D06341511AC463050032BC14 /* QQDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQDataModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +97,6 @@
 				D06341431AC452240032BC14 /* Controller */,
 				D06341201AC451240032BC14 /* AppDelegate.h */,
 				D06341211AC451240032BC14 /* AppDelegate.m */,
-				D06341231AC451240032BC14 /* ViewController.h */,
-				D06341241AC451240032BC14 /* ViewController.m */,
 				D06341261AC451240032BC14 /* Main.storyboard */,
 				D06341291AC451240032BC14 /* Images.xcassets */,
 				D063412B1AC451240032BC14 /* LaunchScreen.xib */,
@@ -134,6 +135,8 @@
 		D06341421AC452030032BC14 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D06341501AC463050032BC14 /* QQDataModel.h */,
+				D06341511AC463050032BC14 /* QQDataModel.m */,
 				D063414A1AC454C90032BC14 /* QQGroupModel.h */,
 				D063414B1AC454C90032BC14 /* QQGroupModel.m */,
 				D06341471AC4549F0032BC14 /* QQFirendModel.h */,
@@ -145,6 +148,8 @@
 		D06341431AC452240032BC14 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D063414D1AC45E7C0032BC14 /* ListTableViewController.h */,
+				D063414E1AC45E7C0032BC14 /* ListTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -258,11 +263,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D06341251AC451240032BC14 /* ViewController.m in Sources */,
 				D06341491AC4549F0032BC14 /* QQFirendModel.m in Sources */,
+				D06341521AC463050032BC14 /* QQDataModel.m in Sources */,
 				D06341221AC451240032BC14 /* AppDelegate.m in Sources */,
 				D063414C1AC454C90032BC14 /* QQGroupModel.m in Sources */,
 				D063411F1AC451240032BC14 /* main.m in Sources */,
+				D063414F1AC45E7C0032BC14 /* ListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

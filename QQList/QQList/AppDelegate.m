@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "QQDataModel.h"
+#import "ListTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,19 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    // 用代码创建一个UITableViewController
+    ListTableViewController *controller = [[ListTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    // 创建一个UINavigationController，需指定一个controller做其RootViewController
+    UINavigationController *naviController = [[UINavigationController alloc] initWithRootViewController:controller];
+    
+    // 指定一个window的rootViewController，即app一打开默认显示的controller
+    self.window.rootViewController = naviController;
+    
+    // 初始化数据
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"friends.plist" ofType:nil];
+    QQDataModel *dataModel = [[QQDataModel alloc] initWithContentsOfFile:path];
+    controller.dataModel = dataModel;
+    
     return YES;
 }
 
