@@ -10,8 +10,10 @@
 #import "QQDataModel.h"
 #import "QQGroupModel.h"
 #import "QQFirendModel.h"
+#import "HeaderView.h"
+#import "DetailViewController.h"
 
-@interface ListTableViewController ()
+@interface ListTableViewController () <HeaderViewDelegate>
 
 @end
 
@@ -20,11 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.tableView.sectionHeaderHeight = 40;
+    [self clipExtraCellLine:self.tableView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,7 +45,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *indentifier = @"CellForFriends";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:indentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:indentifier];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:indentifier];
     }
@@ -61,39 +60,35 @@
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+#pragma mark - Table View Delegate
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    HeaderView *headerView = [HeaderView headerViewWithTableView:tableView];
+    headerView.delegate = self;
+    headerView.groupModel = self.dataModel.dataArray[section];
+    
+    return headerView;
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    DetailViewController *controller = [[DetailViewController alloc] init];
+    [self.navigationController pushViewController:controller animated:NO];
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+#pragma mark - Header View Delegate
+
+- (void)clickView {
+    [self.tableView reloadData];
 }
-*/
+
+#pragma mark - Clear the Extra Lines
+
+- (void)clipExtraCellLine:(UITableView *)tableview {
+    UIView *view = [[UIView alloc] init];
+    view.backgroundColor = [UIColor clearColor];
+    
+    [self.tableView setTableFooterView:view];
+}
 
 /*
 #pragma mark - Navigation

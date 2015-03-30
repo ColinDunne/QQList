@@ -18,6 +18,8 @@
 		D063414C1AC454C90032BC14 /* QQGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D063414B1AC454C90032BC14 /* QQGroupModel.m */; };
 		D063414F1AC45E7C0032BC14 /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063414E1AC45E7C0032BC14 /* ListTableViewController.m */; };
 		D06341521AC463050032BC14 /* QQDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D06341511AC463050032BC14 /* QQDataModel.m */; };
+		D06341581AC57A7B0032BC14 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D06341571AC57A7B0032BC14 /* HeaderView.m */; };
+		D0C772C11AC9779B0064ACE1 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C772C01AC9779B0064ACE1 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		D063414E1AC45E7C0032BC14 /* ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewController.m; sourceTree = "<group>"; };
 		D06341501AC463050032BC14 /* QQDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQDataModel.h; sourceTree = "<group>"; };
 		D06341511AC463050032BC14 /* QQDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQDataModel.m; sourceTree = "<group>"; };
+		D06341561AC57A7B0032BC14 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HeaderView.h; path = QQList/View/HeaderView.h; sourceTree = SOURCE_ROOT; };
+		D06341571AC57A7B0032BC14 /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HeaderView.m; path = QQList/View/HeaderView.m; sourceTree = SOURCE_ROOT; };
+		D0C772BF1AC9779B0064ACE1 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		D0C772C01AC9779B0064ACE1 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +156,8 @@
 			children = (
 				D063414D1AC45E7C0032BC14 /* ListTableViewController.h */,
 				D063414E1AC45E7C0032BC14 /* ListTableViewController.m */,
+				D0C772BF1AC9779B0064ACE1 /* DetailViewController.h */,
+				D0C772C01AC9779B0064ACE1 /* DetailViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -157,6 +165,8 @@
 		D06341441AC4527A0032BC14 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D06341561AC57A7B0032BC14 /* HeaderView.h */,
+				D06341571AC57A7B0032BC14 /* HeaderView.m */,
 			);
 			name = View;
 			path = Model/View;
@@ -263,8 +273,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D06341581AC57A7B0032BC14 /* HeaderView.m in Sources */,
 				D06341491AC4549F0032BC14 /* QQFirendModel.m in Sources */,
 				D06341521AC463050032BC14 /* QQDataModel.m in Sources */,
+				D0C772C11AC9779B0064ACE1 /* DetailViewController.m in Sources */,
 				D06341221AC451240032BC14 /* AppDelegate.m in Sources */,
 				D063414C1AC454C90032BC14 /* QQGroupModel.m in Sources */,
 				D063411F1AC451240032BC14 /* main.m in Sources */,
@@ -459,6 +471,7 @@
 				D063413E1AC451240032BC14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D063413F1AC451240032BC14 /* Build configuration list for PBXNativeTarget "QQListTests" */ = {
 			isa = XCConfigurationList;
@@ -467,6 +480,7 @@
 				D06341411AC451240032BC14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

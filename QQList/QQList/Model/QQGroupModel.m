@@ -32,4 +32,8 @@
     return [[self alloc] initWithDict:dict];
 }
 
+- (void)toggleOpen {
+    self.isOpen = !self.isOpen;
+}
+
 @end

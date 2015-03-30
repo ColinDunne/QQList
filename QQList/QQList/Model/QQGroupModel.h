@@ -22,4 +22,6 @@
 
 + (instancetype)GroupWithDict:(NSDictionary *)dict;
 
+- (void)toggleOpen;
+
 @end

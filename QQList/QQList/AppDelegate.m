@@ -18,6 +18,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+
     // 用代码创建一个UITableViewController
     ListTableViewController *controller = [[ListTableViewController alloc] initWithStyle:UITableViewStylePlain];
     // 创建一个UINavigationController，需指定一个controller做其RootViewController
@@ -30,6 +33,8 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:@"friends.plist" ofType:nil];
     QQDataModel *dataModel = [[QQDataModel alloc] initWithContentsOfFile:path];
     controller.dataModel = dataModel;
+    
+    [self.window makeKeyAndVisible];
     
     return YES;
 }
